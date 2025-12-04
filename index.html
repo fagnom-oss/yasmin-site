@@ -140,7 +140,7 @@
             align-items: center;
             background: linear-gradient(135deg, var(--roxo-dark) 0%, #1A0524 100%);
             padding: 120px 0 60px; /* Padding para compensar o header fixo */
-            position: relative; /* Adicionado para posicionar a imagem */
+            position: relative; /* Para permitir posicionamento da imagem */
             overflow: hidden; /* Para garantir que a imagem não vaze */
         }
 
@@ -149,7 +149,7 @@
             grid-template-columns: 1fr; /* Uma coluna em mobile */
             gap: 40px;
             align-items: center;
-            position: relative; /* Para que o texto fique acima da imagem se ela for absoluta */
+            position: relative; /* Para que o texto fique acima da imagem */
             z-index: 1; /* Garante que o texto fique acima da imagem */
         }
 
@@ -191,6 +191,12 @@
             color: var(--texto-secondary);
             margin-bottom: 30px;
             max-width: 600px;
+        }
+
+        .hero-image-wrapper { /* Novo wrapper para a imagem */
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .hero-image {
@@ -563,6 +569,14 @@
             .hero {
                 padding-top: 150px; /* Ajuste para header maior */
             }
+            .hero-content { /* Ajuste para mobile */
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .hero-image-wrapper { /* Ajuste para mobile */
+                order: 2; /* Coloca a imagem abaixo do texto */
+                margin-top: 30px;
+            }
             .btn-group {
                 justify-content: center;
             }
@@ -597,7 +611,7 @@
                 </h1>
 
                 <p class="hero-subtitle">
-                    Treinos personalizados adaptados às suas necessidades e objetivos. Foco em exercícios eficazes para melhorar força, flexibilidade e resistência. Atendimento presencial <strong>na Grande Natal</strong> (Natal, Parnamirim) ou consultoria online.
+                    Treinos personalizados adaptados às suas necessidades e objetivos. Foco em exercícios eficazes para melhorar força, flexibilidade e resistência. Atendimento presencial <strong>em Natal e Parnamirim</strong> ou consultoria online.
                 </p>
 
                 <div class="btn-group">
@@ -611,7 +625,7 @@
                 </div>
             </div>
 
-            <div>
+            <div class="hero-image-wrapper"> <!-- Adicionado wrapper para a imagem -->
                 <img src="yasmin-hero.jpg" alt="Yasmin Costa Personal Trainer em ação" class="hero-image">
             </div>
         </div>
@@ -648,7 +662,7 @@
             <div class="benefit-card">
                 <div class="benefit-icon">📍</div>
                 <h3>Presencial ou Online</h3>
-                <p>Atendimento na Grande Natal (Natal, Parnamirim) ou consultoria online para todo Brasil. Você escolhe!</p>
+                <p>Atendimento em Natal e Parnamirim ou consultoria online para todo Brasil. Você escolhe!</p>
             </div>
 
             <div class="benefit-card">
