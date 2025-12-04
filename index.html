@@ -14,9 +14,9 @@
     <!-- Open Graph / Facebook / WhatsApp Preview -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://yasminpersonal.com.br/">
-    <meta property="og:title" content="Yasmin Costa Personal Trainer | Movimento é Transformador">
-    <meta property="og:description" content="Treinos personalizados na Grande Natal. Força, flexibilidade e resistência. Avaliação grátis!">
-    <meta property="og:image" content="https://yasminpersonal.com.br/yasmin-og.jpg"> <!-- Caminho absoluto para garantir -->
+    <meta property="og:title" content="Yasmin Costa Personal Trainer | Grande Natal | Presencial e Online">
+    <meta property="og:description" content="Personal Trainer CREF 010618-G/RN na Grande Natal. Treinos personalizados para emagrecimento, hipertrofia e idosos. Avaliação GRÁTIS! WhatsApp (84) 99427-8534">
+    <meta property="og:image" content="https://yasminpersonal.com.br/yasmin-og.jpg"> <!-- CORREÇÃO: Caminho absoluto para garantir -->
     <meta property="og:image:width" content="1200"> <!-- Adicionado para otimização -->
     <meta property="og:image:height" content="630"> <!-- Adicionado para otimização -->
     <meta property="og:image:alt" content="Yasmin Costa Personal Trainer em ação"> <!-- Adicionado para acessibilidade -->
@@ -140,6 +140,8 @@
             align-items: center;
             background: linear-gradient(135deg, var(--roxo-dark) 0%, #1A0524 100%);
             padding: 120px 0 60px; /* Padding para compensar o header fixo */
+            position: relative; /* Adicionado para posicionar a imagem */
+            overflow: hidden; /* Para garantir que a imagem não vaze */
         }
 
         .hero-content {
@@ -147,6 +149,8 @@
             grid-template-columns: 1fr; /* Uma coluna em mobile */
             gap: 40px;
             align-items: center;
+            position: relative; /* Para que o texto fique acima da imagem se ela for absoluta */
+            z-index: 1; /* Garante que o texto fique acima da imagem */
         }
 
         @media (min-width: 768px) {
@@ -498,23 +502,14 @@
             height: 24px;
         }
 
-        /* Corrigindo o ícone do WhatsApp para ser verde */
-        .social-icon.whatsapp svg {
-            fill: #25D366; /* Cor verde do WhatsApp */
-        }
-        .social-icon.whatsapp:hover {
-            background-color: #25D366; /* Fundo verde no hover */
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
-        }
-
         /* Gradiente para o ícone do Instagram */
         .social-icon.instagram svg path {
             fill: url(#instagram-gradient);
         }
-        .social-icon.instagram:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(255, 77, 139, 0.4);
+
+        /* Cor para o ícone do WhatsApp */
+        .social-icon.whatsapp svg path {
+            fill: white; /* CORREÇÃO: Garante que o ícone do WhatsApp seja branco */
         }
 
         .footer-bottom {
@@ -553,7 +548,7 @@
         .whatsapp-float svg {
             width: 30px;
             height: 30px;
-            fill: white;
+            fill: white; /* CORREÇÃO: Garante que o ícone do WhatsApp seja branco */
         }
 
         /* RESPONSIVIDADE GERAL */
@@ -602,12 +597,17 @@
                 </h1>
 
                 <p class="hero-subtitle">
-                    Treinos personalizados adaptados às suas necessidades e objetivos. Foco em exercícios eficazes para melhorar força, flexibilidade e resistência. Atendimento presencial <strong>na Grande Natal</strong> ou consultoria online.
+                    Treinos personalizados adaptados às suas necessidades e objetivos. Foco em exercícios eficazes para melhorar força, flexibilidade e resistência. Atendimento presencial <strong>na Grande Natal</strong> (Natal, Parnamirim) ou consultoria online.
                 </p>
 
                 <div class="btn-group">
                     <a href="#form" class="btn btn-primary">🎯 Agendar Avaliação Grátis</a>
-                    <a href="https://wa.me/5584994278534?text=Olá%20Yasmin!%20Vim%20pelo%20site!" class="btn btn-primary" style="background: #25D366;">💬 Falar no WhatsApp</a>
+                    <a href="https://wa.me/5584994278534?text=Olá%20Yasmin!%20Vim%20pelo%20site!" class="btn btn-primary" style="background: #25D366;">
+                        💬 Falar no WhatsApp
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.304-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                    </a>
                 </div>
             </div>
 
@@ -648,7 +648,7 @@
             <div class="benefit-card">
                 <div class="benefit-icon">📍</div>
                 <h3>Presencial ou Online</h3>
-                <p>Perfeito para quem quer treinar em casa ou até mesmo na academia de sua preferência.</p>
+                <p>Atendimento na Grande Natal (Natal, Parnamirim) ou consultoria online para todo Brasil. Você escolhe!</p>
             </div>
 
             <div class="benefit-card">
@@ -692,7 +692,7 @@
                 </p>
 
                 <p style="margin-bottom: 20px;">
-                    Suporte e motivação para ajudá-la a superar obstáculos e alcançar seus objetivos. Se você está pronta para alcançar seus objetivos de condicionamento físico e melhorar sua saúde e bem-estar, <strong>vamos transformar seu corpo e sua vida!</strong>
+                    Suporte e motivação para ajudá-la a superar obstáculos e alcançar seus objetivos. Se você está pronta para alcançar seu melhor desempenho físico, <strong>eu estou aqui para guiar você</strong> em cada passo do caminho.
                 </p>
 
                 <p style="color: var(--rosa-light); font-weight: 700; font-size: 1.15rem; margin-top: 30px; margin-bottom: 30px;">
@@ -742,33 +742,63 @@
 
         <div class="faq-container">
             <div class="faq-item">
-                <p class="faq-question">🌎 Onde você atende?</p>
-                <p class="faq-answer">Atendimento presencial <strong>na Grande Natal</strong> (Natal, Parnamirim e região metropolitana). Para outras regiões, consultoria online. Horário: Segunda a Sábado, 09:00-18:00.</p>
+                <p class="faq-question">❓ A avaliação inicial é mesmo gratuita?</p>
+                <p class="faq-answer">Sim! A primeira avaliação é 100% GRÁTIS e sem compromisso. É uma conversa para nos conhecermos e eu entender seus objetivos.</p>
             </div>
 
             <div class="faq-item">
-                <p class="faq-question">🆕 Nunca fiz musculação. Posso começar?</p>
-                <p class="faq-answer">SIM! Adapto tudo ao seu nível. Começamos no seu ritmo, com segurança e progressão adequada.</p>
+                <p class="faq-question">📍 Onde são os treinos presenciais?</p>
+                <p class="faq-answer">Atendo na região da Grande Natal (Natal, Parnamirim). Posso ir até você ou combinamos um local.</p>
             </div>
 
             <div class="faq-item">
-                <p class="faq-question">👴👵 Tenho mais de 60 anos. Posso treinar?</p>
-                <p class="faq-answer">Absolutamente! Musculação é ESSENCIAL: previne quedas, mantém independência e qualidade de vida. Treinos adaptados com total segurança.</p>
+                <p class="faq-question">💻 Como funciona a consultoria online?</p>
+                <p class="faq-answer">Você recebe treino personalizado, vídeos explicativos e acompanhamento por WhatsApp. Perfeito para quem quer treinar em casa ou até mesmo na academia de sua preferência.</p>
             </div>
 
             <div class="faq-item">
-                <p class="faq-question">⏱️ Quanto tempo até ver resultados?</p>
-                <p class="faq-answer">Primeiras mudanças (energia, disposição): 2-3 semanas. Resultados visuais: 6-8 semanas com consistência.</p>
+                <p class="faq-question">⏰ Quais os horários de atendimento?</p>
+                <p class="faq-answer">Atendo de segunda a sábado, das 09:00 às 18:00. Horários flexíveis conforme disponibilidade.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">👴 Atende pessoas idosas?</p>
+                <p class="faq-answer">Sim! Tenho experiência com alunos 60+ e adapto os treinos para segurança e eficácia, focando em qualidade de vida e independência.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">🏋️ Preciso ter experiência com musculação?</p>
+                <p class="faq-answer">Não! Atendo de iniciantes a avançados. Adapto o treino ao seu nível atual e vamos evoluindo juntos.</p>
             </div>
 
             <div class="faq-item">
                 <p class="faq-question">💰 Qual o investimento?</p>
-                <p class="faq-answer">Os valores variam conforme modalidade (presencial ou online) e frequência. Entre em contato para orçamento personalizado. Avaliação inicial é GRÁTIS!</p>
+                <p class="faq-answer">Os valores variam conforme modalidade (presencial ou online) e frequência. Vamos conversar na avaliação gratuita e encontrar o melhor plano para você!</p>
             </div>
 
             <div class="faq-item">
-                <p class="faq-question">📞 Como funciona o suporte?</p>
-                <p class="faq-answer">Suporte via WhatsApp de segunda a sábado, 09:00-18:00. Respondo dúvidas sobre execução, ajustes e motivação. Você nunca está sozinho!</p>
+                <p class="faq-question">📱 Como faço para começar?</p>
+                <p class="faq-answer">É simples! Clique em "Agendar Avaliação Grátis", preencha o formulário e me envie pelo WhatsApp. Vou responder rapidinho!</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">🎯 Quais objetivos você atende?</p>
+                <p class="faq-answer">Emagrecimento, hipertrofia, ganho de força, melhora de condicionamento, qualidade de vida, preparação física e treino para idosos.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">📊 Como é feito o acompanhamento?</p>
+                <p class="faq-answer">Acompanho sua evolução, ajusto os treinos conforme necessário e estou sempre disponível para tirar dúvidas e motivar você!</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">🏃 Posso treinar em casa?</p>
+                <p class="faq-answer">Sim! Crio treinos adaptados para casa, com ou sem equipamentos. Também atendo em academias e parques.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">🔄 Posso mudar de presencial para online (ou vice-versa)?</p>
+                <p class="faq-answer">Claro! O treino é flexível e adaptável à sua rotina. Podemos ajustar conforme sua necessidade.</p>
             </div>
         </div>
     </div>
@@ -798,7 +828,7 @@
                     <label for="modalidade">Modalidade de Interesse *</label>
                     <select id="modalidade" name="modalidade" required>
                         <option value="">Selecione...</option>
-                        <option value="Presencial na Grande Natal">Presencial na Grande Natal</option>
+                        <option value="Presencial na Grande Natal">Presencial na Grande Natal (Natal, Parnamirim)</option>
                         <option value="Consultoria Online">Consultoria Online</option>
                         <option value="Ainda não decidi">Ainda não decidi</option>
                     </select>
@@ -898,27 +928,27 @@
                     </a>
 
                     <a href="https://wa.me/5584994278534" class="social-icon whatsapp" target="_blank" aria-label="WhatsApp">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="white"> <!-- CORREÇÃO: fill="white" -->
                             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.304-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                            </svg>
-                        </a>
-                    </div>
+                        </svg>
+                    </a>
                 </div>
             </div>
-
-            <div class="footer-bottom">
-                <p>
-                    © 2025 <strong>Yasmin Costa Personal Trainer</strong>. Todos os direitos reservados.<br>
-                    <span style="font-size: 0.85rem; opacity: 0.7;">Grande Natal-RN | Presencial & Online | yasminpersonal.com.br</span>
-                </p>
-            </div>
         </div>
-    </footer>
 
-    <!-- WHATSAPP FLUTUANTE -->
-    <a href="https://wa.me/5584994278534?text=Olá%20Yasmin!%20Vim%20pelo%20site!" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.304-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        <div class="footer-bottom">
+            <p>
+                © 2025 <strong>Yasmin Costa Personal Trainer</strong>. Todos os direitos reservados.<br>
+                <span style="font-size: 0.85rem; opacity: 0.7;">Grande Natal-RN | Presencial & Online | yasminpersonal.com.br</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<!-- WHATSAPP FLUTUANTE -->
+<a href="https://wa.me/5584994278534?text=Olá%20Yasmin!%20Vim%20pelo%20site!" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="white"> <!-- CORREÇÃO: fill="white" -->
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.304-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
         </svg>
     </a>
 
